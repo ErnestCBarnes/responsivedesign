@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+#wrapper {
+	background: #bbb;
+	min-height: 100%;
+}
+
+.column {
+	width: 100%;
+	min-height: 150px;
+	padding: 10px;
+}
+
+.column h3 {
+	text-align: center;
+}
+
+#col1 {
+	background: #f00;
+}
+
+#col2 {
+	background: #00f;
+}
+
+#col3 {
+	background: #0f0;
+}
+
+@media screen and (min-width: 786px) {
+	#col1 {
+		position: absolute;
+		width: 200px
+	}
+	
+	#col2 {
+		margin: 0 100 0 100;
+		width: 100%;
+	}
+	
+	#col3 {
+	 position: absolute;
+	 width: 200px;
+	 top: 0;
+	 right: 0;
+	}
+}
