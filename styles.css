@@ -1,79 +1,107 @@
-/* GENERAL CSS */
+/* --------------------- GENERAL CSS --------------------- */
 
 body {
 	margin: 0;
+	font-family: helvetica, verdana, arial, sans-serif;
 }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-
-#wrapper {
-	background: #bbb;
-	min-height: 100%;
-}
-
-.column {
-	width: 100%;
-	min-height: 150px;
+header, footer, section {
 	padding: 10px;
+	display: block;
 }
 
-.column h3 {
+header, footer {
+	width: 100%;
+	background: #000;
+	color: #fff;
+}
+
+section {
+	min-height: 100px;
+}
+
+main {
+	background: #fff;
+	height: 100%;
+}
+
+h1, h3, p {
 	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
-#col1 {
+#left {
 	background: #f00;
 }
 
-#col2 {
+#mid {
 	background: #00f;
 }
 
-#col3 {
+#right {
 	background: #0f0;
 }
 
 /* ==================== RESPONSIVE CSS ========================== */
 
-/* MOBILE PHONES (Landscape) */
-@media screen and (min-device-width: 640px) and (Orientation: Landscape) {
-
+/* --------------------- MOBILE PHONES --------------------- */
+@media screen and (max-width: 640px) {
+	header {
+		
+	}
 }
 
-/* MOBILE PHONES (Portrait) */
-@media screen and (min-device-width: 480px) and (Orientation: Portrait) {
-
-}
-
-/* TABLETS (Landscape or Portrait) */
-@media screen and (min-device-width: 786px) and (max-device-width: 1024px) {
-	#col1 {
-		position: absolute;
-		width: 200px
+/* --------------------- TABLETS --------------------- */
+@media screen and (min-width: 786px) and (max-width: 1024px) {
+	#left, #right {
+		width: 50%;
 	}
 	
-	#col2 {
-		margin: 0 100 0 100;
+	#mid {
+		width: 100%;
+	}
+}
+
+/* --------------------- DESKTOP --------------------- */
+@media screen and (min-width: 1024px) {
+	main {
+		margin: 0 auto;
+		width: 80%;
+	}
+	
+	header {
 		width: 100%;
 	}
 	
-	#col3 {
-	 position: absolute;
-	 width: 200px;
-	 top: 0;
-	 right: 0;
+	section {
+		display: inline-block;
+		min-height: 300px;
 	}
+	
+	footer {
+		position: relative;
+	}
+	
+	#left, #right {
+		width: 19%;
+	}
+	
+	#mid {
+		width: 60%;
+	}
+	
 }
 
-/* DESKTOP */
-@media screen and (min-width: 1024px) {
+/* ==================== PRINT CSS ========================== */
 
-}
-
-/* PRINT */
+/* --------------------- PRINT --------------------- */
 @media print {
-
+	/* Must make page greyscale compliant */
 }
