@@ -5,30 +5,15 @@ body {
 	font-family: helvetica, verdana, arial, sans-serif;
 }
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
-
-header, footer, section {
-	padding: 10px;
-	display: block;
-}
-
 header, footer {
 	width: 100%;
 	background: #000;
 	color: #fff;
+	clear: both;
 }
 
 section {
-	min-height: 100px;
-}
-
-main {
-	background: #fff;
-	height: 100%;
+	min-height: 200px; /* Only used so that columns display longer than content. */
 }
 
 h1, h3, p {
@@ -49,23 +34,32 @@ h1, h3, p {
 	background: #0f0;
 }
 
+
 /* ==================== RESPONSIVE CSS ========================== */
 
 /* --------------------- MOBILE PHONES --------------------- */
 @media screen and (max-width: 640px) {
-	header {
-		
-	}
+	
 }
 
 /* --------------------- TABLETS --------------------- */
 @media screen and (min-width: 786px) and (max-width: 1024px) {
-	#left, #right {
-		width: 50%;
+	section {
+		display: inline-block;
+	}
+	
+	#left {
+		width: 25%;
 	}
 	
 	#mid {
-		width: 100%;
+		width: 75%;
+		float: right;
+	}
+	
+	#right {
+		width: 75%;
+		float: right;
 	}
 }
 
@@ -76,19 +70,10 @@ h1, h3, p {
 		width: 80%;
 	}
 	
-	header {
-		width: 100%;
-	}
-	
 	section {
 		display: inline-block;
-		min-height: 300px;
 	}
-	
-	footer {
-		position: relative;
-	}
-	
+
 	#left, #right {
 		width: 19%;
 	}
